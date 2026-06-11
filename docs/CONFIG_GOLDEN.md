@@ -23,7 +23,7 @@ This affects the upstream `GEN_LATEST` defaults across battle, Pokemon, item, ov
 | `I_BERRY_PRICE` | `include/config/item.h` | `GEN_7` | `GEN_4` | Use Gen 4 item pricing behavior instead of a later explicit override. |
 | `I_EXP_SHARE_ITEM` | `include/config/item.h` | `GEN_5` | `GEN_4` | Keep Exp. Share as a held-item era mechanic; modern party-wide Exp. Share remains inactive. |
 | `OW_BERRY_DRAIN_RATE` | `include/config/overworld.h` | `GEN_6_ORAS` | `GEN_4` | Use Gen 4 berry moisture/drain behavior. |
-| `OW_BERRY_COLORS` | `include/config/overworld.h` | `GEN_6_ORAS` | `GEN_4` | Avoid ORAS berry color behavior in the Gen 4 baseline. |
+| `OW_BERRY_COLORS` | `include/config/overworld.h` | `GEN_6_ORAS` | `GEN_6_ORAS` | Kept at a legal expansion value because `GEN_4` is rejected by `src/berry.c`; this is a berry color table compatibility setting, not a Gen 6 mechanics toggle. |
 
 ## Species And Form Gates
 
@@ -47,6 +47,22 @@ This affects the upstream `GEN_LATEST` defaults across battle, Pokemon, item, ov
 | `P_GEN_9_CROSS_EVOS` | `include/config/species_enabled.h` | `P_CROSS_GENERATION_EVOS` | `FALSE` | Disable post-Gen 4 cross-generation evolutions. |
 
 Gen 1-4 Pokemon and Gen 2-4 cross-generation evolutions remain enabled. This keeps Gen 4 evolution families available while preventing later Fairy-only paths such as Sylveon.
+
+## Species Verification
+
+Gate rule: native Gen 4 families resolve through `P_GEN_4_POKEMON == TRUE`; Gen 4 evolutions on older families require the older family gate plus `P_GEN_4_CROSS_EVOS == TRUE`. Gen 5+ families resolve through disabled generation gates.
+
+| Species | Definition | Active gate | Result |
+|---|---|---|---|
+| `SPECIES_LOPUNNY` | include/constants/species.h:447; data in src/data/pokemon/species_info/gen_4_families.h under P_FAMILY_BUNEARY | `P_FAMILY_BUNEARY -> P_GEN_4_POKEMON == TRUE` | Enabled |
+| `SPECIES_CARNIVINE` | include/constants/species.h:474; data in src/data/pokemon/species_info/gen_4_families.h under P_FAMILY_CARNIVINE | `P_FAMILY_CARNIVINE -> P_GEN_4_POKEMON == TRUE` | Enabled |
+| `SPECIES_RHYPERIOR` | include/constants/species.h:483; data in src/data/pokemon/species_info/gen_1_families.h under P_FAMILY_RHYHORN and P_GEN_4_CROSS_EVOS | `P_FAMILY_RHYHORN -> P_GEN_1_POKEMON == TRUE; P_GEN_4_CROSS_EVOS == TRUE` | Enabled |
+| `SPECIES_MAGMORTAR` | include/constants/species.h:486; data in src/data/pokemon/species_info/gen_1_families.h under P_FAMILY_MAGMAR and P_GEN_4_CROSS_EVOS | `P_FAMILY_MAGMAR -> P_GEN_1_POKEMON == TRUE; P_GEN_4_CROSS_EVOS == TRUE` | Enabled |
+| `SPECIES_ELECTIVIRE` | include/constants/species.h:485; data in src/data/pokemon/species_info/gen_1_families.h under P_FAMILY_ELECTABUZZ and P_GEN_4_CROSS_EVOS | `P_FAMILY_ELECTABUZZ -> P_GEN_1_POKEMON == TRUE; P_GEN_4_CROSS_EVOS == TRUE` | Enabled |
+| `SPECIES_HONCHKROW` | include/constants/species.h:449; data in src/data/pokemon/species_info/gen_2_families.h under P_FAMILY_MURKROW and P_GEN_4_CROSS_EVOS | `P_FAMILY_MURKROW -> P_GEN_2_POKEMON == TRUE; P_GEN_4_CROSS_EVOS == TRUE` | Enabled |
+| `SPECIES_DARKRAI` | include/constants/species.h:511; data in src/data/pokemon/species_info/gen_4_families.h under P_FAMILY_DARKRAI | `P_FAMILY_DARKRAI -> P_GEN_4_POKEMON == TRUE` | Enabled |
+| `SPECIES_SNIVY` | include/constants/species.h:517; data in src/data/pokemon/species_info/gen_5_families.h under P_FAMILY_SNIVY | `P_FAMILY_SNIVY -> P_GEN_5_POKEMON == FALSE` | Excluded |
+
 
 ## DexNav
 
