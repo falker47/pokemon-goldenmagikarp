@@ -63,16 +63,37 @@
 
 ## CI
 
-- Workflow adjusted in M0-ter: build-firered, build-leafgreen, and release are blocking; make check remains visible but non-blocking.
-- New dev push and GitHub Actions verification are pending at this point in the local report flow.
+- Pushed dev commit checked by GitHub Actions: `1b4d546d1edeb1e989c2833aefddc04ecdced916`.
+- Run status: completed success.
+- Run link: https://github.com/falker47/pokemon-goldenmagikarp/actions/runs/27362915540
+- Blocking jobs: build-firered success, build-leafgreen success, release success, gate build success.
+- Non-blocking baseline job: test completed failure, accepted by M0 policy and documented in `docs/TEST_BASELINE_M0.md`.
 
 ## Reference Cleanup
 
 - Required grep target: README*, .github/, docs/, include/, src/ for Markdown/YAML files.
-- Stale repository name references are being corrected to pokemon-goldenmagikarp as part of M0-ter.
+- Result: no residual old hyphenated repository-name references in the required Markdown/YAML targets after cleanup.
 
 ## Open Risks
 
 - Upstream tracks multiboot .gba blobs in data/: data/mb_berry_fix.gba, data/mb_colosseum.gba, data/mb_ereader.gba. They are inherited upstream assets and are not removed in M0.
 - M0 baseline accepts current make check failures. Any M1+ change should compare against docs/TEST_BASELINE_M0.md.
-- Final CI run still needs to be checked after pushing the M0-ter commits.
+
+## M0 CHIUSO
+
+- [x] Canonical work happened in WSL clone `/home/falker/pokemon-goldenmagikarp`; path accepted by Claude waiver.
+- [x] Origin and upstream remotes configured correctly.
+- [x] Branch convention preserved: work on `dev`, no dev to main merge.
+- [x] Toolchain installed and documented; modern gcc-arm-none-eabi route used.
+- [x] FireRed ROM build passed in Linux filesystem; `make -j2` accepted by Claude waiver.
+- [x] ROM SHA1 recorded: `d6e02dee9954026b6a06d2b1946c42f99d7dc173`.
+- [x] ROM artifact not committed; manual smoke-test copy placed at `/mnt/c/Users/Falker/Desktop/golden_magikarp_m0.gba`.
+- [x] Smoke-test screenshot waived; manual mGBA Windows boot test assigned to Mauri; WSL mGBA .sav creation recorded as partial evidence.
+- [x] Gen 4 species verification completed for Lopunny, Carnivine, Rhyperior, Magmortar, Electivire, Honchkrow, Darkrai, plus negative Snivy check.
+- [x] Reference cleanup completed: no required Markdown/YAML target still contains the old hyphenated repository name.
+- [x] make check baseline completed and documented; failure is accepted baseline, not M0 blocker.
+- [x] CI adjusted to build/release blocking gate and verified green on GitHub Actions run 27362915540.
+- [x] Four build/time/dex fixes committed separately and marked as later upstream PR candidates.
+- [x] M0 report, config, build log, and test baseline committed on dev.
+
+M0 is formally closed. M1 can start from dev after the Windows workspace archive step is completed.
