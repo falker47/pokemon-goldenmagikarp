@@ -139,7 +139,7 @@ static const enum NationalDexOrder sHoennToNationalOrder[HOENN_DEX_COUNT - 1] =
     FOREACH_SPECIES_IN_HOENN_DEX_ORDER(HOENN_TO_NATIONAL)
 };
 
-static const enum Species sNationalOrderToSpecies[NATIONAL_DEX_COUNT] =
+static const enum Species sNationalOrderToSpecies[NATIONAL_DEX_TABLE_COUNT] =
 {
     FOREACH_SPECIES_IN_NATIONAL_DEX(NATIONAL_TO_SPECIES)
 };
