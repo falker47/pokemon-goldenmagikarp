@@ -15255,12 +15255,13 @@ const struct ItemInfo gItemsInfo[] =
 
     [ITEM_LINKING_CORD] =
     {
-        .name = ITEM_NAME("Linking Cord"),
-        .price = 8000,
+        .name = ITEM_NAME("PIETRARADIO"),
+        .price = 0,
         .description = COMPOUND_STRING(
-            "A mysterious string "
-            "that makes\nsome "
-            "Pokémon evolve."),
+            "Una pietra che "
+            "canalizza onde\nradio. Fa evolvere "
+            "i POKéMON\nche un tempo si "
+            "evolvevano\nsolo con lo scambio."),
         .pocket = POCKET_ITEMS,
         .sortType = ITEM_TYPE_EVOLUTION_ITEM,
         .type = ITEM_USE_PARTY_MENU,

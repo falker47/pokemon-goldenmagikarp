@@ -416,6 +416,7 @@ static void ItemUseCB_ReplaceMoveWithTMHM(u8 taskId, TaskFunc func);
 static void Task_ReplaceMoveWithTMHM(u8 taskId);
 static void CB2_UseEvolutionStone(void);
 static bool8 MonCanEvolve(void);
+static bool8 TryDisplayPietraradioRequirementMessage(u8 taskId, TaskFunc func);
 static u8 CanTeachMove(struct Pokemon *mon, enum Move move);
 static void TryItemHoldFormChange(struct Pokemon *mon, s8 slotId);
 static void Task_TossHeldItemYesNo(u8 taskId);
@@ -444,7 +445,34 @@ static EWRAM_DATA u16 *sSlot1TilemapBuffer = NULL; // for switching party slots
 static EWRAM_DATA u16 *sSlot2TilemapBuffer = NULL;
 EWRAM_DATA u8 gSelectedOrderFromParty[MAX_FRONTIER_PARTY_SIZE] = {0};
 static EWRAM_DATA u16 sPartyMenuItemId = ITEM_NONE;
+static EWRAM_DATA u16 sEvolutionStoneTargetSpecies = SPECIES_NONE;
 ALIGNED(4) EWRAM_DATA u8 gBattlePartyCurrentOrder[PARTY_SIZE / 2] = {0}; // bits 0-3 are the current pos of Slot 1, 4-7 are Slot 2, and so on
+
+struct PietraradioEvolutionRequirement
+{
+    u16 species;
+    enum Item item1;
+    enum Item item2;
+};
+
+static const struct PietraradioEvolutionRequirement sPietraradioEvolutionRequirements[] =
+{
+    {SPECIES_POLIWHIRL, ITEM_KINGS_ROCK, ITEM_NONE},
+    {SPECIES_SLOWPOKE, ITEM_KINGS_ROCK, ITEM_NONE},
+    {SPECIES_ONIX, ITEM_METAL_COAT, ITEM_NONE},
+    {SPECIES_SCYTHER, ITEM_METAL_COAT, ITEM_NONE},
+    {SPECIES_SEADRA, ITEM_DRAGON_SCALE, ITEM_NONE},
+    {SPECIES_PORYGON, ITEM_UP_GRADE, ITEM_NONE},
+    {SPECIES_PORYGON2, ITEM_DUBIOUS_DISC, ITEM_NONE},
+    {SPECIES_CLAMPERL, ITEM_DEEP_SEA_TOOTH, ITEM_DEEP_SEA_SCALE},
+    {SPECIES_RHYDON, ITEM_PROTECTOR, ITEM_NONE},
+    {SPECIES_ELECTABUZZ, ITEM_ELECTIRIZER, ITEM_NONE},
+    {SPECIES_MAGMAR, ITEM_MAGMARIZER, ITEM_NONE},
+    {SPECIES_DUSCLOPS, ITEM_REAPER_CLOTH, ITEM_NONE},
+};
+
+static const u8 sText_PietraradioNeedsHeldItem[] = _("Serve {STR_VAR_1}.{PAUSE_UNTIL_PRESS}");
+static const u8 sText_PietraradioNeedsEitherHeldItem[] = _("Serve {STR_VAR_1} o {STR_VAR_2}.{PAUSE_UNTIL_PRESS}");
 
 static EWRAM_DATA u16 sLevelUpStatsBefore[NUM_STATS];
 static EWRAM_DATA u16 sLevelUpStatsAfter[NUM_STATS];
@@ -6302,15 +6330,60 @@ static void Task_SacredAshDisplayHPRestored(u8 taskId)
 #undef tHadEffect
 #undef tLastSlotUsed
 
+static bool8 TryDisplayPietraradioRequirementMessage(u8 taskId, TaskFunc func)
+{
+    u32 i;
+    enum Item heldItem;
+    struct Pokemon *mon = &gPlayerParty[gPartyMenu.slotId];
+    u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
+
+    if (gSpecialVar_ItemId != ITEM_PIETRARADIO)
+        return FALSE;
+
+    heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
+    for (i = 0; i < ARRAY_COUNT(sPietraradioEvolutionRequirements); i++)
+    {
+        const struct PietraradioEvolutionRequirement *requirement = &sPietraradioEvolutionRequirements[i];
+
+        if (requirement->species != species)
+            continue;
+        if (heldItem == requirement->item1 || (requirement->item2 != ITEM_NONE && heldItem == requirement->item2))
+            return FALSE;
+
+        CopyItemName(requirement->item1, gStringVar1);
+        if (requirement->item2 != ITEM_NONE)
+        {
+            CopyItemName(requirement->item2, gStringVar2);
+            StringExpandPlaceholders(gStringVar4, sText_PietraradioNeedsEitherHeldItem);
+        }
+        else
+        {
+            StringExpandPlaceholders(gStringVar4, sText_PietraradioNeedsHeldItem);
+        }
+        gPartyMenuUseExitCallback = FALSE;
+        DisplayPartyMenuMessage(gStringVar4, TRUE);
+        ScheduleBgCopyTilemapToVram(2);
+        gTasks[taskId].func = func;
+        return TRUE;
+    }
+
+    return FALSE;
+}
+
 void ItemUseCB_EvolutionStone(u8 taskId, TaskFunc func)
 {
     PlaySE(SE_SELECT);
+    sEvolutionStoneTargetSpecies = GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_ITEM_USE, gSpecialVar_ItemId, NULL, NULL, CHECK_EVO);
     if (ExecuteTableBasedItemEffect(&gPlayerParty[gPartyMenu.slotId], gSpecialVar_ItemId, gPartyMenu.slotId, 0))
     {
-        gPartyMenuUseExitCallback = FALSE;
-        DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
-        ScheduleBgCopyTilemapToVram(2);
-        gTasks[taskId].func = func;
+        sEvolutionStoneTargetSpecies = SPECIES_NONE;
+        if (TryDisplayPietraradioRequirementMessage(taskId, func) == FALSE)
+        {
+            gPartyMenuUseExitCallback = FALSE;
+            DisplayPartyMenuMessage(gText_WontHaveEffect, TRUE);
+            ScheduleBgCopyTilemapToVram(2);
+            gTasks[taskId].func = func;
+        }
     }
     else
     {
@@ -6322,13 +6395,18 @@ static void CB2_UseEvolutionStone(void)
 {
     u16 targetSpecies;
     gCB2_AfterEvolution = gPartyMenu.exitCallback;
-    targetSpecies = GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_ITEM_USE, gSpecialVar_ItemId, NULL, NULL, CHECK_EVO);
+    targetSpecies = sEvolutionStoneTargetSpecies;
+    if (targetSpecies == SPECIES_NONE)
+        targetSpecies = GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_ITEM_USE, gSpecialVar_ItemId, NULL, NULL, CHECK_EVO);
+    sEvolutionStoneTargetSpecies = SPECIES_NONE;
     BeginEvolutionScene(&gPlayerParty[gPartyMenu.slotId], targetSpecies, FALSE, gPartyMenu.slotId);
     RemoveBagItem(gSpecialVar_ItemId, 1);
 }
 
 static bool8 MonCanEvolve(void)
 {
+    if (sEvolutionStoneTargetSpecies != SPECIES_NONE)
+        return TRUE;
     return GetEvolutionTargetSpecies(&gPlayerParty[gPartyMenu.slotId], EVO_MODE_ITEM_USE, gSpecialVar_ItemId, NULL, NULL, CHECK_EVO) != SPECIES_NONE;
 }
 
