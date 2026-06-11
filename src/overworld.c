@@ -1509,6 +1509,7 @@ void UpdateTimeOfDay(void)
         gTimeBlend.altWeight = (DEFAULT_WEIGHT - gTimeBlend.weight) / 2 + (DEFAULT_WEIGHT / 2);
         gTimeOfDay = TIME_MORNING;
     }
+#if OW_TIMES_OF_DAY >= GEN_5
     else if (IsBetweenHours(hours, EVENING_HOUR_BEGIN, EVENING_HOUR_END)) // evening
     {
         gTimeBlend.startBlend = gTimeOfDayBlend[TIME_DAY];
@@ -1517,6 +1518,7 @@ void UpdateTimeOfDay(void)
         gTimeBlend.altWeight = gTimeBlend.weight / 2 + (DEFAULT_WEIGHT / 2);
         gTimeOfDay = TIME_EVENING;
     }
+#endif
     else if (IsBetweenHours(hours, NIGHT_HOUR_BEGIN, NIGHT_HOUR_BEGIN + 1)) // evening->night
     {
         gTimeBlend.startBlend = gTimeOfDayBlend[TIME_EVENING];
