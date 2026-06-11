@@ -11,7 +11,12 @@
 *.exe
 *.fwjpnfont
 *.gba
-!data/*.gba
+*.gb
+*.gbc
+*.sav
+*.srm
+baserom*
+roms/
 *.sgm
 *.sa1
 *.sg1

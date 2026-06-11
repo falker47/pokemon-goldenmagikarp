@@ -1,0 +1,31 @@
+Pokemon Golden Magikarp - Milestone 0 build log
+Date: 2026-06-11
+Branch: dev
+Base: cawtds/pokefirered-expansion origin/no-ql-and-hs at d31e1ff5c
+
+Attempt 1: PowerShell / repository default Makefile
+Command:
+  make -j2 2>&1 | Tee-Object -FilePath docs\build_log_m0.txt
+
+Result:
+  Failed before build start. PowerShell could not find make:
+  "make : Termine 'make' non riconosciuto come nome di cmdlet, funzione, programma eseguibile o file script."
+
+Toolchain checks:
+  WSL component is present, but no Linux distributions are installed.
+  C:\devkitPro is absent.
+  C:\msys64 exists, but base MSYS2 profile did not have make/gcc/arm-none-eabi-gcc.
+  C:\cygwin64 exists and has gcc 11.4.0, but no make/arm-none-eabi-gcc.
+
+Documented alternative attempted: MSYS2/MinGW64 modern toolchain installation
+Command:
+  C:\msys64\usr\bin\bash.exe -lc "pacman -S --needed --noconfirm make git mingw-w64-x86_64-gcc mingw-w64-x86_64-pkgconf mingw-w64-x86_64-libpng mingw-w64-x86_64-zlib mingw-w64-x86_64-arm-none-eabi-gcc mingw-w64-x86_64-arm-none-eabi-binutils mingw-w64-x86_64-arm-none-eabi-newlib"
+
+Result:
+  Failed before any package update completed. Pacman sync database/mirror state is stale:
+  repeated 404 errors for package URLs such as mingw-w64-x86_64-gcc-13.1.0-6 and git-2.40.1-1.
+  The operation also ended with:
+  "errore: impossibile rinominare /var/cache/pacman/pkg/... Permission denied"
+
+Conclusion:
+  No ROM was produced in this environment. Per M0 guardrails, the build system was not rewritten.
