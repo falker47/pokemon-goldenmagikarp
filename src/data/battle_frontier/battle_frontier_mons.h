@@ -49,7 +49,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_MAGIKARP] = {
-        .species = SPECIES_MAGIKARP,
+        .species = SPECIES_GOLDEEN,
         .moves = {MOVE_FLAIL, MOVE_NONE, MOVE_NONE, MOVE_NONE},
         .heldItem = ITEM_FOCUS_BAND,
         .ev = TRAINER_PARTY_EVS(252, 252, 0, 0, 0, 0),
@@ -3673,7 +3673,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_GYARADOS_1] = {
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_KINGDRA,
         .moves = {MOVE_RETURN, MOVE_BITE, MOVE_THUNDER_WAVE, MOVE_DRAGON_DANCE},
         .heldItem = ITEM_LUM_BERRY,
         .ev = TRAINER_PARTY_EVS(252, 0, 0, 0, 0, 252),
@@ -4441,7 +4441,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_GYARADOS_2] = {
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_KINGDRA,
         .moves = {MOVE_HYDRO_PUMP, MOVE_THUNDERBOLT, MOVE_FIRE_BLAST, MOVE_BLIZZARD},
         .heldItem = ITEM_SHELL_BELL,
         .ev = TRAINER_PARTY_EVS(0, 0, 0, 252, 252, 0),
@@ -5209,7 +5209,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_GYARADOS_3] = {
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_KINGDRA,
         .moves = {MOVE_SURF, MOVE_THUNDER, MOVE_RAIN_DANCE, MOVE_EARTHQUAKE},
         .heldItem = ITEM_QUICK_CLAW,
         .ev = TRAINER_PARTY_EVS(0, 252, 0, 0, 252, 0),
@@ -5977,7 +5977,7 @@ const struct TrainerMon gBattleFrontierMons[NUM_FRONTIER_MONS] =
         .ball = BALL_POKE
     },
     [FRONTIER_MON_GYARADOS_4] = {
-        .species = SPECIES_GYARADOS,
+        .species = SPECIES_KINGDRA,
         .moves = {MOVE_RETURN, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE, MOVE_REST},
         .heldItem = ITEM_CHESTO_BERRY,
         .ev = TRAINER_PARTY_EVS(170, 0, 170, 0, 0, 170),

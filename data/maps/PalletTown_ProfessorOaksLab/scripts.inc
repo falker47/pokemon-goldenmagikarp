@@ -296,9 +296,9 @@ PalletTown_ProfessorOaksLab_EventScript_RivalBattle::
 	closemessage
 	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_FaceDown
 	waitmovement 0
-	goto_if_eq VAR_STARTER_MON, 0, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleCharmander
-	goto_if_eq VAR_STARTER_MON, 1, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleBulbasaur
-	goto_if_eq VAR_STARTER_MON, 2, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleSquirtle
+	goto_if_eq VAR_STARTER_MON, 0, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleSquirtle
+	goto_if_eq VAR_STARTER_MON, 2, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleBulbasaur
+	goto_if_eq VAR_STARTER_MON, 1, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleCharmander
 	end
 
 @ The scripts for the rival approaching the player for battle are a bit bloated because
@@ -1069,8 +1069,8 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
 	setvar PLAYER_STARTER_SPECIES, SPECIES_BULBASAUR
-	setvar RIVAL_STARTER_SPECIES, SPECIES_CHARMANDER
-	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
+	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
 	msgbox PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls
@@ -1137,9 +1137,9 @@ EventScript_GiveNicknameToStarter::
 
 PalletTown_ProfessorOaksLab_EventScript_RivalPicksStarter::
 	closemessage
-	goto_if_eq PLAYER_STARTER_NUM, 0, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToCharmander
-	goto_if_eq PLAYER_STARTER_NUM, 1, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToBulbasaur
-	goto_if_eq PLAYER_STARTER_NUM, 2, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToSquirtle
+	goto_if_eq PLAYER_STARTER_NUM, 0, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToSquirtle
+	goto_if_eq PLAYER_STARTER_NUM, 1, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToCharmander
+	goto_if_eq PLAYER_STARTER_NUM, 2, PalletTown_ProfessorOaksLab_EventScript_RivalWalksToBulbasaur
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalWalksToCharmander::
@@ -1212,8 +1212,8 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
 	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
-	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
-	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
+	setvar RIVAL_STARTER_SPECIES, SPECIES_CHARMANDER
+	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
 	msgbox PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls
@@ -1225,8 +1225,8 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
 	setvar PLAYER_STARTER_SPECIES, SPECIES_CHARMANDER
-	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
-	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
+	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
 	msgbox PalletTown_ProfessorOaksLab_Text_ThoseArePokeBalls

@@ -2856,27 +2856,27 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
+Goldeen
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Poliwag
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Krabby
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Horsea
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Psyduck
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Tentacool
 Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -2906,11 +2906,11 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
+Goldeen
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-Magikarp
+Poliwag
 Level: 24
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -4732,17 +4732,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pidgey
+Spearow
 Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Sand Attack
 
 Squirtle
 Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Tail Whip
 
 === TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR ===
 Name: TERRY
@@ -4753,17 +4749,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pidgey
+Spearow
 Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Sand Attack
 
 Bulbasaur
 Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Growl
 
 === TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER ===
 Name: TERRY
@@ -4774,17 +4766,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pidgey
+Spearow
 Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Sand Attack
 
 Charmander
 Level: 9
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Scratch
-- Growl
 
 === TRAINER_RIVAL_CERULEAN_SQUIRTLE ===
 Name: TERRY
@@ -4795,33 +4783,17 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pidgeotto
-Level: 17
+Pidgey
+Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Sand Attack
-- Gust
-- Quick Attack
 
-Abra
-Level: 16
+Machop
+Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Teleport
-
-Rattata
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Tail Whip
-- Quick Attack
 
 Squirtle
-Level: 18
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Tackle
-- Tail Whip
-- Withdraw
-- Water Gun
 
 === TRAINER_RIVAL_CERULEAN_BULBASAUR ===
 Name: TERRY
@@ -4832,33 +4804,17 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pidgeotto
-Level: 17
+Pidgey
+Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Sand Attack
-- Gust
-- Quick Attack
 
-Abra
-Level: 16
+Machop
+Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Teleport
-
-Rattata
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Tail Whip
-- Quick Attack
 
 Bulbasaur
-Level: 18
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Sleep Powder
-- Poison Powder
-- Vine Whip
-- Leech Seed
 
 === TRAINER_RIVAL_CERULEAN_CHARMANDER ===
 Name: TERRY
@@ -4869,33 +4825,17 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Pidgeotto
-Level: 17
+Pidgey
+Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Sand Attack
-- Gust
-- Quick Attack
 
-Abra
-Level: 16
+Machop
+Level: 18
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Teleport
-
-Rattata
-Level: 15
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-- Tackle
-- Tail Whip
-- Quick Attack
 
 Charmander
-Level: 18
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-- Metal Claw
-- Ember
-- Growl
-- Scratch
 
 === TRAINER_SCIENTIST_TED ===
 Name: TED
@@ -7244,7 +7184,7 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Blue
 
-Gyarados
+Kingdra
 Level: 56
 IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Hyper Beam
@@ -7293,18 +7233,13 @@ Music: Male
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Geodude
-Level: 12
+Rhyhorn
+Level: 17
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Defense Curl
 
 Onix
-Level: 14
+Level: 18
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Bind
-- Rock Tomb
 
 === TRAINER_LEADER_MISTY ===
 Name: MISTY
@@ -7316,21 +7251,13 @@ Items: Super Potion
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Staryu
-Level: 18
+Cloyster
+Level: 27
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Tackle
-- Harden
-- Recover
-- Water Pulse
 
 Starmie
-Level: 21
+Level: 28
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Swift
-- Recover
-- Rapid Spin
-- Water Pulse
 
 === TRAINER_LEADER_LT_SURGE ===
 Name: LT. SURGE
@@ -7342,29 +7269,17 @@ Items: Super Potion / Full Heal
 Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
-Voltorb
-Level: 21
+Electabuzz
+Level: 33
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Sonic Boom
-- Tackle
-- Screech
-- Shock Wave
 
-Pikachu
-Level: 18
+Jolteon
+Level: 34
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Quick Attack
-- Thunder Wave
-- Double Team
-- Shock Wave
 
 Raichu
-Level: 24
+Level: 35
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
-- Quick Attack
-- Thunder Wave
-- Double Team
-- Shock Wave
 
 === TRAINER_LEADER_ERIKA ===
 Name: ERIKA
@@ -7613,19 +7528,15 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Pidgeotto
-Level: 19
+Level: 29
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Raticate
-Level: 16
+Machoke
+Level: 29
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Kadabra
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Wartortle
-Level: 20
+Squirtle
+Level: 31
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_RIVAL_SS_ANNE_BULBASAUR ===
@@ -7638,19 +7549,15 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Pidgeotto
-Level: 19
+Level: 29
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Raticate
-Level: 16
+Machoke
+Level: 29
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Kadabra
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Ivysaur
-Level: 20
+Bulbasaur
+Level: 31
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_RIVAL_SS_ANNE_CHARMANDER ===
@@ -7663,19 +7570,15 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 
 Pidgeotto
-Level: 19
+Level: 29
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Raticate
-Level: 16
+Machoke
+Level: 29
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-Kadabra
-Level: 18
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
-Charmeleon
-Level: 20
+Charmander
+Level: 31
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_RIVAL_POKEMON_TOWER_SQUIRTLE ===
@@ -7720,7 +7623,7 @@ Pidgeotto
 Level: 25
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Gyarados
+Golduck
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -7753,7 +7656,7 @@ Exeggcute
 Level: 23
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Gyarados
+Golduck
 Level: 22
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -7807,7 +7710,7 @@ Pidgeot
 Level: 37
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Gyarados
+Golduck
 Level: 38
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -7840,7 +7743,7 @@ Exeggcute
 Level: 38
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
-Gyarados
+Golduck
 Level: 35
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -7934,7 +7837,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Rock Blast
 - Fury Attack
 
-Gyarados
+Golduck
 Level: 45
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Hydro Pump
@@ -7999,7 +7902,7 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Poison Powder
 - Stun Spore
 
-Gyarados
+Golduck
 Level: 45
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 - Hydro Pump
@@ -8117,7 +8020,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Rock Tomb
 - Scary Face
 
-Gyarados
+Golduck
 Level: 59
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
@@ -8184,7 +8087,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sleep Powder
 - Light Screen
 
-Gyarados
+Golduck
 Level: 61
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
@@ -10724,7 +10627,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
+Seaking
 Level: 50
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -12892,27 +12795,27 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Magikarp
+Seaking
 Level: 47
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magikarp
+Poliwhirl
 Level: 47
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magikarp
+Kingler
 Level: 47
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magikarp
+Seadra
 Level: 47
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magikarp
+Golduck
 Level: 47
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
-Magikarp
+Tentacruel
 Level: 47
 IVs: 9 HP / 9 Atk / 9 Def / 9 SpA / 9 SpD / 9 Spe
 
@@ -13379,7 +13282,7 @@ Music: Swimmer
 Double Battle: No
 AI: Check Bad Move
 
-Gyarados
+Seaking
 Level: 55
 IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 
@@ -14059,7 +13962,7 @@ Double Battle: No
 AI: Check Bad Move / Try To Faint / Check Viability
 Mugshot: Blue
 
-Gyarados
+Kingdra
 Level: 68
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hyper Beam
@@ -14193,7 +14096,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Thunderbolt
 - Aerial Ace
 
-Gyarados
+Golduck
 Level: 73
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump
@@ -14260,7 +14163,7 @@ IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Sleep Powder
 - Light Screen
 
-Gyarados
+Golduck
 Level: 73
 IVs: 31 HP / 31 Atk / 31 Def / 31 SpA / 31 SpD / 31 Spe
 - Hydro Pump

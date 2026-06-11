@@ -3761,7 +3761,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_8 = {
 			.speechAfter = {EC_MOVE2(PROTECT), EC_WORD_AND, EC_WORD_RESUSCITATE, EC_WORD_THE, EC_WORD_GREEN, EC_WORD_WORLD},
 			.mons = {
 				{
-					.species = SPECIES_GYARADOS,
+					.species = SPECIES_KINGDRA,
 					.heldItem = ITEM_SITRUS_BERRY,
 					.moves = {MOVE_EARTHQUAKE, MOVE_WATERFALL, MOVE_BLIZZARD, MOVE_HYPER_BEAM},
 					.hpEV = 0,
@@ -5280,7 +5280,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_8 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_GYARADOS,
+					.species = SPECIES_KINGDRA,
 					.heldItem = ITEM_SALAC_BERRY,
 					.moves = {MOVE_HYPER_BEAM, MOVE_DRAGON_DANCE, MOVE_THUNDER_WAVE, MOVE_THUNDERBOLT},
 					.hpEV = 0,
@@ -6160,7 +6160,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_MAGIKARP,
+					.species = SPECIES_GOLDEEN,
 					.heldItem = ITEM_CHOICE_BAND,
 					.moves = {MOVE_SPLASH, MOVE_TACKLE, MOVE_NONE, MOVE_NONE},
 					.hpEV = 0,
@@ -6204,7 +6204,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_GYARADOS,
+					.species = SPECIES_KINGDRA,
 					.heldItem = ITEM_SHELL_BELL,
 					.moves = {MOVE_HYPER_BEAM, MOVE_THUNDER_WAVE, MOVE_EARTHQUAKE, MOVE_PROTECT},
 					.hpEV = 0,
@@ -6226,7 +6226,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_MAGIKARP,
+					.species = SPECIES_GOLDEEN,
 					.heldItem = ITEM_CHOICE_BAND,
 					.moves = {MOVE_FLAIL, MOVE_TACKLE, MOVE_NONE, MOVE_NONE},
 					.hpEV = 0,
@@ -6248,7 +6248,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_7 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_GYARADOS,
+					.species = SPECIES_KINGDRA,
 					.heldItem = ITEM_KINGS_ROCK,
 					.moves = {MOVE_DOUBLE_EDGE, MOVE_THUNDER_WAVE, MOVE_EARTHQUAKE, MOVE_DRAGON_DANCE},
 					.hpEV = 0,
@@ -6500,7 +6500,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Knockout_4 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_MAGIKARP,
+					.species = SPECIES_GOLDEEN,
 					.heldItem = ITEM_BRIGHT_POWDER,
 					.moves = {MOVE_SPLASH, MOVE_FLAIL, MOVE_TACKLE, MOVE_NONE},
 					.hpEV = 0,
@@ -7602,7 +7602,7 @@ static const struct TrainerTowerFloor sTrainerTowerFloor_Double_7 = {
 					.friendship = 255
 				},
 				{
-					.species = SPECIES_GYARADOS,
+					.species = SPECIES_KINGDRA,
 					.heldItem = ITEM_LIECHI_BERRY,
 					.moves = {MOVE_RAIN_DANCE, MOVE_SURF, MOVE_DRAGON_DANCE, MOVE_RETURN},
 					.hpEV = 0,

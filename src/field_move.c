@@ -87,7 +87,7 @@ const struct FieldMoveInfo gFieldMovesInfo[FIELD_MOVE_COUNT] =
     },
     [FIELD_MOVE_WATERFALL] =
     {
-        .defaultSpecies = SPECIES_GYARADOS,
+        .defaultSpecies = SPECIES_SEADRA,
         .isUnlockedFunc = FieldMove_IsUnlockedWaterfall,
         .moveId = MOVE_WATERFALL,
         .partyMessageId = PARTY_MSG_CANT_USE_HERE,
